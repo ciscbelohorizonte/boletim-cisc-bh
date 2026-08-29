@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boletim de Condições Meteorológicas e Risco à Saúde — Belo Horizonte</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -253,68 +252,6 @@
   }
   .creditos-boletim strong{color:#5A6472; font-weight:700;}
   .creditos-boletim .aviso{color:#B5651D; font-weight:600;}
-
-  /* ================================================================
-     RESPONSIVO — ajustes para telas menores (tablet e celular).
-     O layout "cheio" acima (desktop) continua igual; as regras abaixo
-     só entram em vigor conforme a tela vai encolhendo.
-     ================================================================ */
-
-  /* Tablet / celular grande: empilha cabeçalho e a linha nível+protocolo */
-  @media (max-width: 900px) {
-    body{padding:12px;}
-    .cabecalho{flex-wrap:wrap; padding:16px;}
-    .titulo-central{border-left:none; border-right:none; padding:8px 0; order:3; flex-basis:100%; text-align:center;}
-    .titulo-central h1{font-size:14px;}
-    .faixa-periodo{flex-direction:column; align-items:flex-start; gap:4px;}
-    .linha-topo{flex-direction:column;}
-    .caixa-nivel{width:100%;}
-    .tabela-protocolo{font-size:10px;}
-    .tabela-protocolo th, .tabela-protocolo td{padding:4px 6px;}
-
-    /* A faixa de 7 dias é gerada pelo R como dois blocos separados —
-       7 divs de cabeçalho seguidos de 7 divs de valor — que só ficam
-       alinhados (cabeçalho de um dia acima do valor do MESMO dia)
-       quando o grid tem exatamente 7 colunas. Reduzir o número de
-       colunas aqui desalinharia tudo. Em vez disso, mantém as 7
-       colunas com uma largura mínima e deixa rolar na horizontal.
-       O mesmo vale para o container pai .faixa-semana. */
-    .faixa-semana{
-      display:grid; grid-template-columns:repeat(7, minmax(110px, 1fr));
-      overflow-x:auto; -webkit-overflow-scrolling:touch;
-    }
-    .faixa-semana .dia-valores .tmax{white-space:normal;}
-  }
-
-  /* Celular: reduz os 7 cards diários para 3-4 por linha, com rolagem
-     horizontal na imagem do painel de mapas (ela é um raster único
-     gerado pelo R — não reflui como texto, então em vez de espremer
-     até ficar ilegível, deixamos a pessoa arrastar o dedo) */
-  @media (max-width: 600px) {
-    .marca img{height:56px;}
-    .selo-pbh img{height:36px;}
-    .titulo-central h1{font-size:12.5px;}
-    .titulo-central p{font-size:10.5px;}
-
-    .caixa-qualidade-ar{flex-direction:column; align-items:flex-start;}
-    .botao-proar{width:100%; text-align:center;}
-
-    .secao-mapas .grafico{
-      overflow-x:auto; -webkit-overflow-scrolling:touch; padding:10px;
-    }
-    .secao-mapas .grafico img{
-      width:auto; max-width:none; height:640px; /* tamanho legível fixo; rola na horizontal */
-    }
-    .legenda-alerta{justify-content:flex-start;}
-  }
-
-  /* Celular bem pequeno: encolhe um pouco mais a largura mínima de
-     cada coluna da faixa de 7 dias, mantendo o alinhamento (ver nota
-     no breakpoint de 900px acima) */
-  @media (max-width: 400px) {
-    .faixa-semana{grid-template-columns:repeat(7, minmax(92px, 1fr));}
-    .faixa-semana .dia-valores .tmax{font-size:10px;}
-  }
 </style>
 </head>
 <body>
@@ -340,7 +277,7 @@
   <!-- FAIXA DE PERÍODO MONITORADO -->
   <div class="faixa-periodo">
     <span class="grupo-periodo">Período Monitorado: <strong>29/08/2026 a 04/09/2026</strong></span>
-    <span class="emissao"><strong>Emissão:</strong> 29/08/2026 às 15:47</span>
+    <span class="emissao"><strong>Emissão:</strong> 29/08/2026 às 15:52</span>
   </div>
 
 
